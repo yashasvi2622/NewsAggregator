@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Aggregator App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="data:image/png;base64,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" class="rel">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+*{
+    margin:0;
+    padding:0;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+#home{
+    display:flex;
+    flex-direction:column;
+    padding:3px 200px;
+    height:500px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content:"";
+    background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDsTm_0wi4k-vXsSSgm3NKmh7W_Gss03pbUg&usqp=CAU') no-repeat center center/cover;
+    position: absolute;
+    height: 501px;
+    top:0px;
+    left:0px;
+    width:100%;
+    z-index:-1;
+    
+}
+.jumbroton{
+    background-color: transparent !important;
+}
+#main{
+    background:url('https://img.wallpapersafari.com/desktop/1024/576/62/98/Qjf1kZ.png') no-repeat center center/cover  ;
+    height: 100%;
+}
+
+.container{
+    position: relative;
+}
+.container::before{
+    content:"";
+    
+    position: absolute;
+    height: 100%;
+    top:0px;
+    left:0px;
+    width:100%;
+    z-index:-1;
+    opacity:0.9;
+}
+h5{
+    color: aliceblue;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+h3{
+    color: rgb(0, 0, 0);
+    
+}
+</style>
+<body>
+    <section id="home">
+        <div class="jumbotron">
+            <center><h1> News Aggregator App</h1>
+               <a href="/" class="btn btn-danger">Refresh News</a>
+        </center>
+        </div>
+    </section>
+    <section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                    <h3 class="text-centre"> NEWS FROM TIMES OF INDIA</h3>
+                    {% for n in toi_news %}
+                    <h5> -  {{n}} </h5>
+                    <hr>
+                    {% endfor %}
+                    <br>
+            </div>
+            <div class="col-6">
+                    <h3 class="text-centre">NEWS FROM THE HINDU</h3>
+                    {% for htn in ht_news %}
+                    <h5> - {{htn}} </h5>
+                    <hr>
+                    {% endfor %}
+                    <br>
+            </div>
+        </div>
+    </section>
+
+</div>
+<footer>
+    <div>
+       <b>Project made by:</b> 
+       <ol>
+        <li>1)Aanchal Tiwary(19BEC002)</li>
+       <li>2)Yashasvi Patel(19BEC148)</li> 
+        <li>3)Hitika Dalwadi(19BIC021)</li>
+       </ol> 
+    </div>
+</footer>
+    <script
+src="http://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
